@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://urp638vxwaqd"]
+
+[ext_resource type="Texture2D" uid="uid://jdcspa1hvty1" path="res://sprite/logo.svg" id="1_pfymw"]
+[ext_resource type="Texture2D" uid="uid://30qlekyd6gvm" path="res://sprite/UI/buttons.png" id="1_t8n8v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbj55"]
+atlas = ExtResource("1_t8n8v")
+region = Rect2(976, 96, 320, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mm6q"]
+atlas = ExtResource("1_t8n8v")
+region = Rect2(976, 232, 320, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjkn0"]
+atlas = ExtResource("1_t8n8v")
+region = Rect2(1312, 96, 320, 120)
+
+[node name="MainMenu" type="Control" unique_id=599725244]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="BoxContainer" parent="." unique_id=896853755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="ColorRect" type="ColorRect" parent="BG" unique_id=1000676454]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.18808398, 0.40291983, 0.3727818, 1)
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1850997416]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 280
+
+[node name="Logo" type="VBoxContainer" parent="Margin" unique_id=453091780]
+layout_mode = 2
+
+[node name="Texture" type="TextureRect" parent="Margin/Logo" unique_id=993104202]
+custom_minimum_size = Vector2(1000, 700)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_pfymw")
+
+[node name="Button" type="VBoxContainer" parent="Margin" unique_id=1880451237]
+layout_mode = 2
+alignment = 2
+
+[node name="Start" type="TextureButton" parent="Margin/Button" unique_id=574142357]
+custom_minimum_size = Vector2(640, 240)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_gbj55")
+texture_pressed = SubResource("AtlasTexture_2mm6q")
+texture_hover = SubResource("AtlasTexture_sjkn0")
+stretch_mode = 0
+
+[node name="HSeparator" type="HSeparator" parent="Margin/Button" unique_id=1253727206]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Exit" type="TextureButton" parent="Margin/Button" unique_id=923315745]
+custom_minimum_size = Vector2(640, 240)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_gbj55")
+texture_pressed = SubResource("AtlasTexture_2mm6q")
+texture_hover = SubResource("AtlasTexture_sjkn0")
+stretch_mode = 0
+
+[node name="EXTRA" type="Node" parent="." unique_id=1145054683]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EXTRA" unique_id=1142497118]
